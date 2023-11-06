@@ -1,0 +1,115 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// - As a user, I want to be able to start a new project so that I can begin working on the project
+// - As a user, I want to be able to connect my Notion account so that I can integrate my existing
+//     product backlog with AI
+// - As a user, I want to be able to upload a meeting (mp3 or mp4) onto the platform and have it
+//     transcribe the meeting
+// - As a user, I want to be able to see all my tasks in the product backlog from my notion page
+// - As a user, after uploading my meeting, I want to see all the main points that have been talked about
+//     - Within each point, I want to click on each card and it pops up a modal
+//     - The modal shows me timestamps and transcriptions of relevant dialog to that point
+//     - I am then able to ask it more questions so as to clarify
+// - As a user, within each main point, I want to be able to create a new task and have that added to my product
+//     backlog
+// - As a user, I want to see a list of all relevant tasks that were discussed 
+// - When I click on the relevant tasks, it show me the points that were discussed regarding that task
+// - It also allows me to see a history of points that were added on to that task
+// - As a user, I want to be able to link my GitHub repository to connect to my project
+// - As a user, I want to be able to ask it questions regarding the repository
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model User {
+    id        String     @id @default(cuid())
+    name      String
+    projects  Project[]
+    createdAt DateTime   @default(now())
+    updatedAt DateTime   @updatedAt
+    Question  Question[]
+}
+
+model Project {
+    id   String @id @default(cuid())
+    name String
+
+    users User[]
+
+    githubUrl     String?
+    documentation String?    @db.Text
+    meetings      Meeting[]
+    questions     Question[]
+    mermaidGraph  String?
+    commits       Commit[]
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model Question {
+    id       String @id @default(cuid())
+    question String
+    answer   String
+
+    projectId String
+    project   Project @relation(fields: [projectId], references: [id])
+
+    user   User   @relation(fields: [userId], references: [id])
+    userId String
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model Commit {
+    id                 String   @id @default(cuid())
+    commitMessage      String
+    commitHash         String
+    commitAuthorName   String
+    commitAuthorAvatar String
+    commitDate         DateTime
+    summary            String
+
+    projectId String
+    project   Project @relation(fields: [projectId], references: [id])
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model Meeting {
+    id   String @id @default(cuid())
+    name String
+    url  String
+
+    projectId String
+    project   Project @relation(fields: [projectId], references: [id])
+
+    issues Issue[]
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model Issue {
+    id       String @id @default(cuid())
+    start    String
+    end      String
+    gist     String
+    headline String
+    summary  String
+
+    meetingId String
+    meeting   Meeting @relation(fields: [meetingId], references: [id])
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
