@@ -1,4 +1,3 @@
-![Untitled-2022-10-21-1124(1)](https://github.com/Elliott-Chong/Dionysuss/assets/77007117/402a033b-f6ca-440d-a540-db0b98ced1a9)<img width="1374" alt="Screenshot 2023-11-13 at 1 19 02 PM" src="https://github.com/Elliott-Chong/Dionysuss/assets/77007117/081eddea-2b30-44e3-bfb4-beb25f5b4ef7">
 
 <img width="1374" alt="Screenshot 2023-11-13 at 12 39 11 PM" src="https://github.com/Elliott-Chong/Dionysuss/assets/77007117/06086082-9fcb-4ae0-85d1-92a6386b5ef6">
 
