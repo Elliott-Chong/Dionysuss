@@ -5,13 +5,13 @@ import os
 load_dotenv()
 import openai
 from _openai import getEmbeddings
-import pinecone
+import weaviate
 
-pinecone.init(
-    api_key=os.getenv("PINECONE_API_KEY"),
+weaviate.init(
+    api_key=os.getenv("WEAVIATE_API_KEY"),
     environment="asia-southeast1-gcp-free",
 )
-index = pinecone.Index("chatpdf")
+index = weaviate.Index("chatpdf")
 
 
 load_dotenv()

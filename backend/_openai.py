@@ -1,15 +1,15 @@
 from dotenv import load_dotenv
 import os
 import openai
-import pinecone
+import weaviate
 
 load_dotenv()
 
-pinecone.init(
-    api_key=os.getenv("PINECONE_API_KEY"),
+weaviate.init(
+    api_key=os.getenv("WEAVIATE_API_KEY"),
     environment="asia-southeast1-gcp-free",
 )
-index = pinecone.Index("chatpdf")
+index = weaviate.Index("chatpdf")
 
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
