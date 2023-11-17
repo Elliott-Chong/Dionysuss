@@ -1,5 +1,7 @@
 <img width="1380" alt="Screenshot 2023-11-13 at 12 39 01 PM" src="https://github.com/Elliott-Chong/Dionysuss/assets/77007117/ab121d25-1884-44ca-9323-73db0b491f07">
 
+View video demo here: https://youtu.be/_7XDrqMS18g
+
 ## Inspiration ✨
 
 The inspiration behind Dionysus stemmed from the challenges we've all faced as developers when collaborating on code projects. We realized the need for a tool that simplifies the process, streamlines code understanding, and enhances teamwork. Dionysus was born out of this necessity to create a developer-friendly collaboration platform.
