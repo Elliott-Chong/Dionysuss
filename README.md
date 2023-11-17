@@ -1,9 +1,5 @@
 <img width="1380" alt="Screenshot 2023-11-13 at 12 39 01 PM" src="https://github.com/Elliott-Chong/Dionysuss/assets/77007117/ab121d25-1884-44ca-9323-73db0b491f07">
 
-
-![Untitled-2022-10-21-1124(1)](https://github.com/Elliott-Chong/Dionysuss/assets/77007117/49117889-87ff-4871-9cac-f3b805d3d95a)
-
-
 ## Inspiration ✨
 
 The inspiration behind Dionysus stemmed from the challenges we've all faced as developers when collaborating on code projects. We realized the need for a tool that simplifies the process, streamlines code understanding, and enhances teamwork. Dionysus was born out of this necessity to create a developer-friendly collaboration platform.
@@ -35,14 +31,6 @@ We are using a **microservice architecture**. We have a frontend using NextJS an
 2. Integration with GitHub for repository management.
 3. Meeting transcription services for accurate recording of discussions.
 4. Real-time contextual search to provide instant and relevant information.
-
-## The Role of Openshift 🐳
-
-Openshift turned out to be the unsung hero in our Dionysus project, playing a crucial role in making our hackathon journey smoother and more efficient. By using Openshift's containerization magic, we saved a ton of time during development. Normally, setting up and managing the different parts of an application can be a headache, but Openshift simplified this process for us. We could easily deploy and scale Dionysus without getting bogged down in complex infrastructure details.
-
-Thanks to Openshift's container orchestration, our microservices danced in harmony, allowing us to focus on making Dionysus a powerful collaboration tool. The flexibility of Openshift meant we could adapt quickly to changing demands during the hackathon, ensuring that our platform remained stable and responsive.
-
-The ease of deployment and scaling with Openshift was a game-changer. We learned the importance of adaptability, especially during a hackathon, where the ability to quickly adjust to evolving requirements is crucial. Openshift's flexibility ensured that we could effortlessly scale our application to meet increasing demand, saving us precious time that we could then invest in refining Dionysus.
 
 
 ## Challenges we ran into 😓
